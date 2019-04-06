@@ -1,0 +1,18 @@
+.main-menu {
+    display: flex;
+    list-style-type: none;
+
+    &__link:link,
+    &__link:visited {
+        color: $color-grey-7;
+        //text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        border-bottom: 1px solid transparent;
+        transition: all .5s;
+    }
+
+    &__link:hover {
+        border-bottom: 1px solid $color-primary-dark;
+    }
+}
