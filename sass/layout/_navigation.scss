@@ -1,6 +1,13 @@
 .main-menu {
     display: flex;
     list-style-type: none;
+    font-size: $default-font-size;
+
+    &__item{}
+
+    &__link{
+        margin-left: 3rem;
+    }
 
     &__link:link,
     &__link:visited {
@@ -8,11 +15,11 @@
         //text-transform: uppercase;
         text-decoration: none;
         display: inline-block;
-        border-bottom: 1px solid transparent;
+        
         transition: all .5s;
     }
 
     &__link:hover {
-        border-bottom: 1px solid $color-primary-dark;
+        color: $color-grey-8;
     }
 }

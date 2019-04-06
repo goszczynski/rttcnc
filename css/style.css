@@ -9,7 +9,6 @@ html {
   font-size: 62.5%; }
 
 body {
-  padding: .9rem;
   box-sizing: border-box;
   background-color: #1C1C1C; }
 
@@ -67,6 +66,9 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem !important; }
 
+.u-padding-left-right {
+  padding: 0 2rem; }
+
 .footer {
   flex-basis: 5vh;
   border: 1px solid red; }
@@ -74,20 +76,27 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-basis: 10vh;
-  border: 1px solid red; }
+  padding: 0 2rem; }
+  .header__logo {
+    width: 9rem;
+    height: 4rem;
+    fill: currentColor; }
 
 .main-menu {
   display: flex;
-  list-style-type: none; }
+  list-style-type: none;
+  font-size: 1.4rem; }
+  .main-menu__link {
+    margin-left: 3rem; }
   .main-menu__link:link, .main-menu__link:visited {
     color: #908D90;
     text-decoration: none;
     display: inline-block;
-    border-bottom: 1px solid transparent;
     transition: all .5s; }
   .main-menu__link:hover {
-    border-bottom: 1px solid #740404; }
+    color: #cacaca; }
 
 .wrapper {
   width: 100%;
