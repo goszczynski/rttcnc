@@ -18,7 +18,56 @@
         cursor: pointer;
     }
 
+    &:active,
+    &:focus {
+        outline: none;
 
+    }
+}
+
+.btn2 {
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        font-family: 'Abel', sans-serif;
+        font-size: $default-font-size;
+        font-weight: 700;
+        color: $color-grey-7;
+        border: none;
+        cursor: pointer;
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+
+    }
+}
+
+
+.btn-form {
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        background-color: $color-primary;
+        font-family: 'Abel', sans-serif;
+        font-size: $default-font-size;
+        font-weight: 100;
+        color: $color-white;
+        border-radius: 2px;
+        width: 100%;
+        border: none;
+        cursor: pointer;
+    }
 
     &:active,
     &:focus {

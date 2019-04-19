@@ -4,8 +4,10 @@
     flex-wrap: wrap;
     overflow: hidden;
 
+
     &__group {
         position: relative;
+        width: calc(100%/4 - 20px);
 
     }
 
@@ -20,7 +22,7 @@
         font-weight: 100;
 
         // height: 5rem;
-        // width: 100%;
+        width: 100%;
 
 
         &--option {
@@ -37,7 +39,7 @@
             border-radius: 2px;
             color: $color-grey-5;
             font-weight: 100;
-
+            width: 100%;
             height: 5rem;
 
             &:focus {

@@ -2,6 +2,8 @@
 $color-primary: #F3182C;
 $color-primary-dark: #740404;
 
+$color-valid: rgb(32, 176, 10);
+
 $color-grey-light-1: #F4F3F4;
 $color-grey-light-2: #eee;
 
@@ -25,7 +27,7 @@ $default-font-size: 1.4rem;
 
 //box shadow
 $box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
-
+$box-shadow-red: 0 1.5rem 4rem rgba($color-primary, .4);
 
 // GRID
 $grid-width: 100%;

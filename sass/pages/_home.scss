@@ -17,7 +17,7 @@
 .section-video {
     // background-color: #1a1a19;
     // border: 1px solid red;
-    flex: 1 1 45%;
+    flex: 0 1 45%;
     position: relative;
 
     &__text {
@@ -36,7 +36,7 @@
 
 
     &__box {
-        border: 1px dashed red;
+        // border: 1px dashed red;
         flex-grow: 1;
         flex-basis: 30%;
         height: 40%;
@@ -44,6 +44,7 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
+
 
         &--1 {
             background-image: linear-gradient(to right bottom,
@@ -53,6 +54,7 @@
 
             background-size: cover;
             background-position: top;
+            padding: 0 1rem;
         }
 
         &--2 {
@@ -61,11 +63,47 @@
 
         &--3 {
             flex-basis: 10%;
+            background-image: linear-gradient(45deg, $color-grey-1, $color-grey-3);
+        }
+
+        &--4 {
+            background-image: linear-gradient(to right bottom,
+                rgba($color-grey-1, .9),
+                rgba($color-grey-2, .9)),
+                url(../img/mazak.jpg);
+
+            background-size: cover;
+            background-position: top;
+            position: relative;
+        }
+
+        &--5 {
+            background-image: linear-gradient(to right bottom,
+                rgba($color-grey-1, .9),
+                rgba($color-grey-2, .9)),
+                url(../img/mori.jpg);
+
+            background-size: cover;
+            background-position: top;
+            position: relative;
+        }
+
+        &--6 {
+            background-image: linear-gradient(to right bottom,
+                rgba($color-grey-1, .99),
+                rgba($color-grey-2, .9)),
+                url(../img/okuma.jpg);
+
+            background-size: cover;
+            background-position: top;
+            position: relative;
+
         }
 
         &--7 {
             // flex-basis: 100%;
             height: 20%;
+            background-image: linear-gradient(135deg, $color-grey-3, $color-grey-1);
         }
     }
 
@@ -74,10 +112,85 @@
 .icon-youtube2 {
     width: 90%;
     fill: $color-grey-5;
+    // fill: $color-primary;
     transform: rotate(90deg);
-    transition: .3s;
+    transition: .4s;
 }
 
 .icon-youtube2:hover {
-    fill: $color-grey-7;
+    // fill: $color-grey-7;
+    fill: $color-primary;
 }
+
+///////////////////////////box 2
+.wraper-box {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+
+
+    &__contact-box {
+        width: 100%;
+        background-image: linear-gradient(to right bottom, $color-grey-1, $color-grey-3);
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &--caption-left {
+            background-color: $color-grey-1;
+            width: 30%;
+            padding: 0 1rem;
+            @include flexVerticalCenter;
+            position: relative;
+            transition: .2s ease-in-out;
+
+            &::after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-left: 10px solid $color-primary;
+                position: absolute;
+                top: 50%;
+                right: -10px;
+                transform: translate(0%, -50%);
+            }
+
+            &:hover {
+                width: 50%;
+            }
+        }
+
+        &--caption-right {
+            background-color: $color-grey-1;
+            width: 30%;
+            padding: 0 1rem;
+            @include flexVerticalCenter;
+            position: relative;
+            transition: .2s ease-in-out;
+
+            &::after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-right: 10px solid $color-primary;
+                position: absolute;
+                top: 50%;
+                left: -10px;
+                transform: translate(0%, -50%);
+            }
+
+            &:hover {
+                width: 50%;
+            }
+        }
+    }
+}
+
+///////end box 2
