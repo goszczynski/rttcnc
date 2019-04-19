@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-basis: 10vh;
-    padding: 0 2rem;
+    // flex-basis: 10vh;
+    padding: 2rem 2rem;
 
-    &__logo{
-        width: 9rem;
-        height: 4rem;
+    &__logo {
+        width: 10rem;
+        height: 5rem;
         // stroke: currentColor;
         fill: currentColor;
     }

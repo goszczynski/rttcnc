@@ -4,16 +4,80 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
-.section-main{
+.section-main {
     display: flex;
-    // flex-direction: column;
+
     height: 100%;
+
 }
-.section-video{
-    border: 1px solid red;
+
+.section-video {
+    // background-color: #1a1a19;
+    // border: 1px solid red;
+    flex: 1 1 45%;
+    position: relative;
+
+    &__text {
+        width: 100%;
+        padding: 0 2rem;
+
+        @include absCenter;
+    }
 }
-.section-grid{
-    border: 1px solid red;
+
+.section-grid {
+    // flex: 1 1 55%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+
+    &__box {
+        border: 1px dashed red;
+        flex-grow: 1;
+        flex-basis: 30%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+                rgba($color-grey-1, .9),
+                rgba($color-grey-2, 0.8)),
+                url(../img/s.jpg);
+
+            background-size: cover;
+            background-position: top;
+        }
+
+        &--2 {
+            flex-basis: 50%;
+        }
+
+        &--3 {
+            flex-basis: 10%;
+        }
+
+        &--7 {
+            // flex-basis: 100%;
+            height: 20%;
+        }
+    }
+
+}
+
+.icon-youtube2 {
+    width: 90%;
+    fill: $color-grey-5;
+    transform: rotate(90deg);
+    transition: .3s;
+}
+
+.icon-youtube2:hover {
+    fill: $color-grey-7;
 }

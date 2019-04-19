@@ -12,7 +12,8 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: $color-grey-3
+    background-color: $color-grey-3;
+    width: 100%;
 }
 
 ::selection {
