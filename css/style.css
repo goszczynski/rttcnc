@@ -246,6 +246,7 @@ body {
     transform: translate(-50%, -50%); }
 
 .section-grid {
+  flex: 1 1 55%;
   display: flex;
   flex-wrap: wrap; }
   .section-grid__box {
