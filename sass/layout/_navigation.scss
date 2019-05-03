@@ -3,9 +3,9 @@
     list-style-type: none;
     font-size: $default-font-size;
 
-    &__item{}
+    &__item {}
 
-    &__link{
+    &__link {
         margin-left: 3rem;
     }
 
@@ -15,11 +15,13 @@
         //text-transform: uppercase;
         text-decoration: none;
         display: inline-block;
-        
+
         transition: all .5s;
     }
 
     &__link:hover {
-        color: $color-grey-8;
+        // color: $color-grey-8;
+        color: $color-primary;
+
     }
 }

@@ -5,20 +5,37 @@
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-medium) {
+        height: 100%;
+    }
 }
 
 .section-main {
     display: flex;
-
+    overflow: hidden;
     height: 100%;
 
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 }
 
 .section-video {
     // background-color: #1a1a19;
-    // border: 1px solid red;
-    flex: 0 1 45%;
+
+    flex: 0 1 30%;
     position: relative;
+
+    @media only screen and (max-width: $bp-largest) {
+        flex: 0 1 50%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        flex: 0 1 100%;
+        // width: 100%;
+        height: 70vh;
+    }
 
     &__text {
         width: 100%;
@@ -29,11 +46,18 @@
 }
 
 .section-grid {
-    flex: 1 1 55%;
-
+    flex: 0 1 70%;
     display: flex;
     flex-wrap: wrap;
 
+    @media only screen and (max-width: $bp-largest) {
+        flex: 0 1 50%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        flex: 0 1 100%;
+        height: 140vh;
+    }
 
     &__box {
         // border: 1px dashed red;
@@ -45,6 +69,12 @@
         justify-content: center;
         text-align: center;
 
+        @media only screen and (max-width: $bp-largest) {
+            // flex-grow: 1;
+            flex-basis: 50%;
+            // width: 50%;
+            height: 26%;
+        }
 
         &--1 {
             background-image: linear-gradient(to right bottom,
@@ -64,13 +94,14 @@
         &--3 {
             flex-basis: 10%;
             background-image: linear-gradient(45deg, $color-grey-1, $color-grey-3);
+
         }
 
         &--4 {
             background-image: linear-gradient(to right bottom,
                 rgba($color-grey-1, .9),
                 rgba($color-grey-2, .9)),
-                url(../img/mazak.jpg);
+                url(../img/m.jpg);
 
             background-size: cover;
             background-position: top;
@@ -81,7 +112,7 @@
             background-image: linear-gradient(to right bottom,
                 rgba($color-grey-1, .9),
                 rgba($color-grey-2, .9)),
-                url(../img/mori.jpg);
+                url(../img/m2.jpg);
 
             background-size: cover;
             background-position: top;
@@ -104,6 +135,11 @@
             // flex-basis: 100%;
             height: 20%;
             background-image: linear-gradient(135deg, $color-grey-3, $color-grey-1);
+
+            @media only screen and (max-width: $bp-medium) {
+                order: -1;
+                flex: 0 1 100%;
+            }
         }
     }
 
@@ -115,6 +151,11 @@
     // fill: $color-primary;
     transform: rotate(90deg);
     transition: .4s;
+
+    @media only screen and (max-width: $bp-largest) {
+        width: 60%;
+        transform: rotate(0deg);
+    }
 }
 
 .icon-youtube2:hover {
@@ -139,6 +180,18 @@
         justify-content: center;
         align-items: center;
 
+        @media only screen and (max-width: $bp-largest) {
+            // flex-direction: row;
+            // justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: row;
+            justify-content: space-around;
+            // flex-wrap: wrap;
+        }
+
         &--caption-left {
             background-color: $color-grey-1;
             width: 30%;
@@ -162,6 +215,10 @@
 
             &:hover {
                 width: 50%;
+            }
+
+            @media only screen and (max-width: $bp-largest) {
+                display: none;
             }
         }
 
@@ -188,6 +245,10 @@
 
             &:hover {
                 width: 50%;
+            }
+
+            @media only screen and (max-width: $bp-largest) {
+                display: none;
             }
         }
     }

@@ -8,6 +8,14 @@
 
 html {
     font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 55%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 70%;
+    }
 }
 
 body {
@@ -21,3 +29,9 @@ body {
     background-color: $color-primary;
     color: $color-white;
 }
+
+// :focus {
+//     color: $color-primary;
+//     box-shadow: $box-shadow-red;
+//     border: none;
+// }
