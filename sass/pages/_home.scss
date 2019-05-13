@@ -19,6 +19,7 @@
     // border: 1px solid red;
     flex: 0 1 45%;
     position: relative;
+    
 
     &__text {
         width: 100%;
@@ -29,7 +30,7 @@
 }
 
 .section-grid {
-    // flex: 1 1 55%;
+    flex: 0 1 55%;
 
     display: flex;
     flex-wrap: wrap;
