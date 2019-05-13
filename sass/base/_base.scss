@@ -8,15 +8,30 @@
 
 html {
     font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 55%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 70%;
+    }
 }
 
 body {
     box-sizing: border-box;
     background-color: $color-grey-3;
     width: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
     background-color: $color-primary;
     color: $color-white;
 }
+
+// :focus {
+//     color: $color-primary;
+//     box-shadow: $box-shadow-red;
+//     border: none;
+// }

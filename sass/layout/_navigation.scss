@@ -1,11 +1,73 @@
+.navigation {
+    // position: relative;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navi-toggle {
+
+    display: none;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+    }
+
+}
+
+.burger {
+    z-index: 20;
+    // border: 1px dashed red;
+
+    .navi-icon {
+        width: 2rem;
+        height: 2px;
+        background-color: $color-grey-6;
+        position: relative;
+        margin-top: 1rem;
+        display: inline-block;
+        // translate: .5s;
+    }
+
+    .navi-icon::after {
+        content: "";
+        width: 2rem;
+        height: 2px;
+        background-color: $color-grey-6;
+        position: absolute;
+        top: -.5rem;
+        left: 0;
+        transition: all .1s;
+    }
+
+    .navi-icon::before {
+        content: "";
+        width: 2rem;
+        height: 2px;
+        background-color: $color-grey-6;
+        position: absolute;
+        top: .5rem;
+        left: 0;
+        transition: all .2s;
+    }
+}
+
 .main-menu {
+    // position: absolute;
+    // top: 50%;
+    // right: 0;
+    // transform: translateY(-50%);
     display: flex;
     list-style-type: none;
     font-size: $default-font-size;
 
-    &__item{}
+    &__item {}
 
-    &__link{
+    &__link {
         margin-left: 3rem;
     }
 
@@ -15,11 +77,56 @@
         //text-transform: uppercase;
         text-decoration: none;
         display: inline-block;
-        
+
         transition: all .5s;
     }
 
     &__link:hover {
-        color: $color-grey-8;
+        // color: $color-grey-8;
+        color: $color-primary;
+
+    }
+}
+
+//logika
+@media only screen and (max-width: $bp-medium) {
+
+    .navi-toggle.active~.main-menu {
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .navi-icon.rotate {
+        // position: fixed;
+        // margin-top: 1rem;
+        // right: 1rem;
+        // transform: rotate(405deg);
+        // background-color: red;
+    }
+
+
+    .main-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -5;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        background-image: linear-gradient(to right bottom, $color-grey-1, $color-grey-4);
+        display: flex;
+        flex-direction: column;
+        transition: .3s;
+
+        @include flexVerticalCenter;
+
+        &__link {
+            margin-top: 5rem;
+        }
     }
 }
