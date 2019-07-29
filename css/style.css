@@ -85,6 +85,9 @@ body {
 .u-padding-left-right {
   padding: 0 2rem; }
 
+.u-padding {
+  padding: 5rem; }
+
 .color-primary {
   color: #F3182C; }
 
@@ -101,6 +104,10 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+
+.box-contact {
+  display: flex;
+  justify-content: space-around; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -152,6 +159,9 @@ body {
 
 .btn-form:active, .btn-form:focus {
   outline: none; }
+
+.btn-machine {
+  width: 100%; }
 
 .form {
   display: flex;
@@ -488,3 +498,33 @@ body {
       @media only screen and (max-width: 75em) {
         .wraper-box__contact-box--caption-right {
           display: none; } }
+
+.wrapper-machine {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 56.25em) {
+    .wrapper-machine {
+      height: 100%; } }
+
+.section-main-machine {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 120vh; }
+  .section-main-machine__section-video {
+    flex: 0 1 40%;
+    position: relative; }
+  .section-main-machine__content {
+    flex: 0 1 60%; }
+
+.content__video-text {
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }

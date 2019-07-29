@@ -1,0 +1,40 @@
+.wrapper-machine {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-medium) {
+        height: 100%;
+    }
+}
+
+.section-main-machine {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 120vh;
+
+
+
+    &__section-video {
+        flex: 0 1 40%;
+        position: relative;
+    }
+
+    &__content {
+        flex: 0 1 60%;
+        // border: 1px dashed red;
+    }
+}
+
+.content__video-text {
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
